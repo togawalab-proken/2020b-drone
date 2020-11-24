@@ -36,7 +36,7 @@ def run_udp_receiver():
 
 thread = threading.Thread(target=run_udp_receiver, args=())
 thread.daemon = True
-# thread.start()
+thread.start()
 
 # コマンドモードを使うため'command'というテキストを投げる
 socket.sendto('command'.encode('utf-8'), tello_address)
